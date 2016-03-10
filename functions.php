@@ -25,6 +25,10 @@ function theme_setup() {
 		'primary' => 'Primary Navigation'
 	) );
 
+	register_nav_menus( array(
+		'primary' => 'Social Nav'
+		));
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -275,4 +279,20 @@ function get_post_parent($post) {
 	else {
 		return $post->ID;
 	}
+}
+
+/* hackeryou_get_thumbnail_url: return current post url */
+function hackeryou_get_thumbnail_url( $post ) {
+	$imageID = get_post_thumbnail_id($post->ID);
+	$imageURL = wp_get_attachment_url($imageID);
+	return $imageURL;
+}
+
+$thumb_img = get_post_meta( get_post_thumbnail_id() ); // Get post ID
+echo $thumb_img['_wp_attachment_image_alt']['0']; echo '<br />';// show alt text
+
+function hackeryou_get_alt_text( $post ) {
+		$imageID = get_post_thumbnail_id($post->ID);
+		$imageALT = get_post_meta($imageID, '_wp_attachment_image_alt', true);
+		return $imageALT;
 }
