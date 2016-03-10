@@ -26,7 +26,7 @@ function theme_setup() {
 	) );
 
 	register_nav_menus( array(
-		'primary' => 'Social Nav'
+		'social_nav' => 'Social Nav'
 		));
 
 	/*

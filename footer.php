@@ -1,7 +1,19 @@
-<footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+<footer class="footer">
+  <div class="footer__navContainer">
+   <?php wp_nav_menu( array(
+     'container' => false,
+     'theme_location' => 'social_nav'
+   )); ?>
   </div>
+  <div class="footer__infoContainer">
+	  	<div class="infoContainer__imageContainer">
+	  	</div> 	
+	  	<div class="infoContainer__textcontainer">
+	  			<h4 class="textContainer__heading"><?php the_field('footer_heading'); ?></h4>
+	  			<p class="textContainer__text"><?php the_field('footer_text'); ?></p>
+	  	</div>
+  </div>
+
 </footer>
 
 <script>
