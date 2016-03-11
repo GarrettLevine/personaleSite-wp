@@ -7,8 +7,11 @@
   </div>
   <div class="footer__infoContainer">
 	  	<div class="infoContainer__imageContainer">
+<<<<<<< HEAD
         <?php $image = get_field('profile_picture'); ?>
         <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']?>">
+=======
+>>>>>>> b6cbc4a21ea06343817ebac283f5886321c4bf9e
 	  	</div> 	
 	  	<div class="infoContainer__textcontainer">
 	  			<h4 class="textContainer__heading"><?php the_field('footer_heading'); ?></h4>

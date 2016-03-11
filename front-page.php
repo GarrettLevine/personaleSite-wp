@@ -43,7 +43,6 @@
       <?php endif; ?>
 
     </section> <!-- /.portfolioArea -->
-
    <!-- **********************************************
                   BLOG AREA
      ************************************************-->
@@ -64,6 +63,7 @@
         <?php endwhile; ?>
         <?php we_reset_postdata(); ?>
       <?php endif; ?>
+
     </section>
     <nav class="socialNav">
         

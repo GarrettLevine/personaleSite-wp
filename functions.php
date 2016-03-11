@@ -21,6 +21,7 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
+
 		'primary' => 'Primary Navigation',
 		'social_nav' => 'Social Nav'
 	) );
@@ -283,3 +284,4 @@ function hackeryou_get_thumbnail_url( $post ) {
 	$imageURL = wp_get_attachment_url($imageID);
 	return $imageURL;
 }
+
