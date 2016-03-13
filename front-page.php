@@ -2,73 +2,96 @@
    <!-- **********************************************
                  MAIN AREA
      ************************************************-->
-<main class="mainArea">
-  <div class="mainArea__wrapper">
+<section class="desktopContainer">
+  <main class="mainArea">
+    <div class="mainArea__wrapper">
 
-    <section class="heroArea">
-      <h1><?php the_field('hero_text') ?></h1>
-      <div class="heroArea__logoContainer">
-        <?php $logoImage = array(get_field('logo')); ?>
-        <img src="<?php echo $logoImage[0]['url'] ?>" alt="<?php echo $logoImage[0]['alt'] ?>">
+      <section class="heroArea">
+        <h1 class="heroArea__heroText"><?php the_field('hero_text') ?></h1>
+        <h3 class="heroArea__subHeading"><?php the_field('sub-heading'); ?></h3>
+        <div class="heroArea__logoContainer">
+          <?php $logoImage = array(get_field('logo')); ?>
+          <img src="<?php echo $logoImage[0]['url'] ?>" alt="<?php echo $logoImage[0]['alt'] ?>">
+        </div>
+      </section>
+
       </div>
-    </section>
+  </main>
 
+       <!-- **********************************************
+                    ABOUT AREA
+         ************************************************-->
+      <section class="aboutArea">
+        <div class="aboutArea__wrapper">
+          <p class="aboutArea__text"><?php the_field('about_text'); ?></p>
+          <p class="aboutArea__knowledge"><?php the_field('skill_set'); ?></p>
+        </div>
+      </section>
+    
+       <!-- **********************************************
+                     PORTFOLIO AREA
+         ************************************************-->
+      <section class="portfolioArea">
+        <h5 class="portfolioArea__heading">Recent Works</h5>
+        <div class="portfolioArea__portfolioContainer">
+        <?php $portfolioPieces = new WP_Query( array(
+               "posts_per_page" => 5,
+               "post_type" => "portfolio"
+             ));?>
+        <?php if($portfolioPieces-> have_posts() ): ?>
+          <?php while($portfolioPieces-> have_posts() ): $portfolioPieces->the_post(); ?>
+            <a href="<?php the_field('url'); ?>" target="_blank">
+              <div class="portfolioArea__imageContainer">
+                <img src="<?php echo hackeryou_get_thumbnail_url( $post ) ?>" alt="">
+              </div>
+              <div class="portfolioArea__skillContainer">
+                <p class="portfolioArea__skillText"><span>Used: </span> <?php the_field('technologies'); ?></p>
+              </div>
+            </a>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
+        </div>
+      </section> <!-- /.portfolioArea -->
      <!-- **********************************************
-                  ABOUT AREA
+                    BLOG AREA
        ************************************************-->
-    <section class="aboutArea">
-        <p class="aboutArea__text"><?php the_field('about_text'); ?></p>
-        <p class="aboutArea__knowledge"><?php the_field('skill_set'); ?></p>
-    </section>
-  
+      <section class="blogArea clearfix">
+        <h5 class="blogArea__heading">Writing</h5>
+        <div class="blogArea__blogContainer">
+   
+        <!-- GET THE POSTS FROM BLOG SECTION -->
+        <?php 
+          $devPosts = new WP_Query(array(
+          'post_per_page' => 3,
+          'category_name' => 'web'
+        )); ?>
+        <?php if($devPosts->have_posts() ) : ?>
+          <?php while($devPosts->have_posts() ) : $devPosts->the_post(); ?>
+            <div class="blogArea__frontPageBlog">
+              <p class="frontPageBlog__date"><?php the_date(); ?></p>
+              <a href="<?php the_permalink(); ?>"><h4 class="frontPageBlog__title"><?php the_title();?></h4></a>
+              <?php the_excerpt();?>
+            </div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+        <?php else: ?>
+        <?php endif; ?>
+        </div>
+      </section> <!-- /.blogArea -->
+
+  </section> <!-- /.flexWrapper -->
      <!-- **********************************************
-                   PORTFOLIO AREA
+                   CONTACT AREA
        ************************************************-->
-    <section class="portfolioArea">
-      <h5 class="portfolioArea__heading">Recent Works</h5>
-      <?php $portfolioPieces = new WP_Query( array(
-             "posts_per_page" => -1,
-             "post_type" => "portfolio"
-           ));?>
-      <?php if($portfolioPieces-> have_posts() ): ?>
-        <?php while($portfolioPieces-> have_posts() ): $portfolioPieces->the_post(); ?>
-          <div class="portfolioArea__imageContainer">
-            <img src="<?php echo hackeryou_get_thumbnail_url( $post ) ?>" alt="">
-          </div>
-          <div class="portfolioArea__skillContainer">
-            <p class="portfolioArea__skillText"><?php the_field('technologies'); ?></p>
-          </div>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-      <?php endif; ?>
-
-    </section> <!-- /.portfolioArea -->
-   <!-- **********************************************
-                  BLOG AREA
-     ************************************************-->
-    <section class="blogArea">
-      <h5 class="blogArea__heading">Writing</h5>
-      <?php $devPosts = new WP_Query(array(
-        "post_per_page" => 3,
-        "post_type" => "post",
-        "category_name" => "web"
-      )); ?>
-      <?php if($devPosts-> have_posts()): ?>
-        <?php while($devPosts-> have_posts() ): $devPosts->the_post(); ?>
-          <div class="blogArea__frontPageBlog">
-            <p class="frontPageBlog__date"><?php the_date(); ?></p>
-            <h4 class="frontPageBlog__title"><?php the_title();?></h4>
-            <p class="frontPageBlog__text"><?php the_excerpt();?></p>
-          </div>
-        <?php endwhile; ?>
-        <?php we_reset_postdata(); ?>
-      <?php endif; ?>
-
-    </section>
-    <nav class="socialNav">
-        
-    </nav>
-  </div> <!-- /.mainArea__wrapper -->
-</main> <!-- /.mainArea -->
-
+      <section class="contactArea clearfix">
+        <div class="contactArea__wrapper">
+          <h5 class="contactArea__heading">Contact me Here.</h5>
+          <?php wp_nav_menu( array(
+            'container' => false,
+            'menu_class' => 'contactArea__socialContainer',
+            'theme_location' => 'social_nav'
+          )); ?>
+        </div>
+      </section> <!-- /.contactArea-->
 <?php get_footer(); ?>

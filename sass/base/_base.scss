@@ -15,9 +15,9 @@ body {
 a {
 	text-decoration: none;
 	transition: color 0.5s;
-
+	color: $black;
 	&:visited {
-		color: $white;
+		color: $black;
 	}
 }
 

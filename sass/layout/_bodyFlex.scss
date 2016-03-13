@@ -1,0 +1,46 @@
+.desktopContainer {
+	@include mq(large) {
+		display: flex;
+		height: 209.5rem;
+		flex-flow: column wrap;
+		max-width: 110rem;
+		margin: auto;
+	}
+}
+
+.mainArea {
+		@include mq(large) {
+			width:60%;
+			margin: 0;
+		}
+}
+
+.aboutArea {
+	@include mq(large) {
+		width: 40%;
+		order: 3;
+		padding-top: 3rem;
+	}
+}
+
+.blogArea {
+	@include mq(large) {
+		width: 55%;
+		order: 1;
+	}
+}
+
+.portfolioArea {
+	@include mq(large) {
+		width: 45%;
+		order: 4;
+	}
+}
+
+.contactArea {
+	@include mq(large) {
+		order:5;
+		margin-top: 0;
+		width: 60;
+	}
+}

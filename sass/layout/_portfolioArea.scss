@@ -1,0 +1,71 @@
+.portfolioArea {
+		@include row();
+
+	&__heading {
+		font-size: 1.3rem;
+		transform: rotate(-90deg);
+		display: inline-block;
+		position: relative;
+		left: -3.2rem;
+		top: 8.8rem;
+		font-weight:300;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+		@include mq(medium) {
+			font-size: 1.6rem;
+			top: 11.3rem;
+			left: 2rem;
+		}
+		@include mq(large) {
+			left: -5rem;
+		}
+	}
+	&__portfolioContainer {
+		@include shift(2);
+		@include span-columns(10);
+		@include mq(large) {
+			@include shift(1);
+			@include span-columns(11);
+		}
+	}
+
+	&__imageContainer {
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+	&__skillContainer{
+		padding: 0.5rem;
+	}
+	&__skillText {
+		font-size: 1.1rem;
+		font-weight: 300;
+		text-align: center;
+		color: $white;
+		letter-spacing: 0.1rem;
+		span {
+			font-weight: 600;
+		}
+		@include mq(medium) {
+			font-size: 2rem;
+		}
+		@include mq(large) {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+$skillColor: (
+	1: #EEC260,
+	2: #9CD4EB,
+	3: #87C3C9,
+	4: #DC5950,
+	5: #4AB3BD
+);
+
+@each $skill, $color in $skillColor {
+.portfolioArea a:nth-child(#{$skill}) .portfolioArea__skillContainer {
+		background-color: #{$color};
+	}
+}

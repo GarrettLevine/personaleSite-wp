@@ -127,7 +127,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 50;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -135,7 +135,7 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <div><a href="'. get_permalink() . '" class="frontPageBlog__readMore">Read More</a></div>';
 }
 
 /**

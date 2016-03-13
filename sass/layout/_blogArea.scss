@@ -1,0 +1,35 @@
+.blogArea {
+	@include mq(large) {
+		
+	}
+	&__heading {
+		@extend .portfolioArea__heading;
+		left: -0.65rem;
+		top: 8.5rem;
+		@include mq(medium) {
+			left: 4.4rem;
+		}
+		@include mq(large) {
+			left: -4rem;
+			top: 10.2rem;
+		}
+	}
+	&__blogContainer {
+		@extend .portfolioArea__portfolioContainer;
+		padding-right: 1.5rem;
+	}
+	&__frontPageBlog:not(:first-child) {
+		margin-top: 4rem;
+	}
+	&__frontPageBlog {
+		p {
+		font-size: 1.6rem;
+		opacity: 0.83;
+		font-weight: 300;
+		line-height: 1.7;
+		@include mq(medium) {
+			font-size: 1.8rem;
+		}
+		}
+	}
+}

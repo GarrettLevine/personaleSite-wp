@@ -1,0 +1,13 @@
+.body {
+	display: flex;
+	flex-direction: column;
+}
+.mainArea {
+		&__wrapper {
+			@include outer-container($max-width--desktop);
+			padding: 0 1.5rem;
+			@include mq(large) {
+				padding: 0;
+			}
+		}
+}

@@ -1,0 +1,30 @@
+.aboutArea {
+	margin: 5rem 0 0;
+	text-align:center;
+	@include mq(medium) {
+		text-align: left;
+	}
+	&__text {
+		font-size: 1.8rem;
+		line-height: 2;
+		font-weight: 300;
+		@include mq(medium) {
+			font-size: 2.5rem;
+		}
+		span {
+			font-weight: 500;
+		}
+	}
+
+	&__knowledge {
+		color: $secondary-color;
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 2;
+		opacity: 0.83;
+		@include mq(medium) {
+			font-size: 2.2rem;
+		}
+	}
+}
+

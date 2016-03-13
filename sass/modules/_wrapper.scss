@@ -1,0 +1,8 @@
+div[class$="wrapper"] {
+	padding: 0 1.5rem;
+	@include outer-container($max-width--tablet);
+	@include mq(large) {
+		padding: 0;
+		@include outer-container($max-width--desktop);
+	}
+}

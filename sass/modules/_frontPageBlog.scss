@@ -1,0 +1,25 @@
+.frontPageBlog {
+	&__date {
+		color: $secondary-color;
+		font-size: 1.3rem;
+	}
+	&__title {
+		margin: 0;
+		letter-spacing: 0.1rem;
+		font-size: 1.8rem;
+		transition: all 0.5s;
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+	&__readMore {
+			font-size: 1.3rem;
+			font-weight: 600;
+			opacity: 0.72;
+			letter-spacing: 0.1rem;
+			text-transform: uppercase;
+			&:hover {
+				color: $secondary-color;
+			}
+	}
+}

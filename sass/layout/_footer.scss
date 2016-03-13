@@ -1,0 +1,8 @@
+.footer {
+	padding: 5rem 1rem;
+	background-color: $primary-color;
+
+	&__infoContainer {
+		@include outer-container($max-width--desktop);
+	}
+}

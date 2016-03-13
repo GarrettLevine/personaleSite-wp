@@ -20,12 +20,15 @@ $font-weight--bold       	 	: 700;
 $font-weight--ultra-bold  		: 900;
 
 //Font Stacks
-$font-family--heading: 'Libre Baskerville', sans-serif;
-$font-family--body: 'Open Sans', serif;
+$font-family--heading: 'Open Sans', sans-serif;
+$font-family--body: 'Open Sans', sans-serif;
 
 //==================================
 // DESCRIPTIVE COLORS
 //==================================
+$burntSienna 				: #ED645B;
+$morningGlory				: #94D7DC;
+
 
 //example
 $steel							: #666666;
@@ -34,8 +37,11 @@ $steel							: #666666;
 // COLOR USAGE
 //==================================
 $white       : #FFF;
-$black       : #000;
-$grey        : #616161; 
+$black       : #3C3C3C;
+$grey        : #616161;
+
+$primary-color			: $morningGlory;
+$secondary-color	: $burntSienna;
 
 
 //==================================
@@ -79,11 +85,11 @@ $path--rel      : "../assets";
 
 //max-width
 $max-width--tablet		: 65rem;
-$max-width--desktop	: 112rem;
+$max-width--desktop	: 118rem;
 
 // Breakpoints
 $brkpoint-sm    : 1px;
-$brkpoint-md    : 768px;
+$brkpoint-md    : 720px;
 $brkpoint-lg    :  940px;
 $brkpoint-xlg   : 100px;
 
