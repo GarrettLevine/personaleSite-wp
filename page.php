@@ -18,4 +18,4 @@
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
-<?php get_footer(); ?>
+<?php include(TEMPLATEPATH . '/header-insidePages.php'); ?>

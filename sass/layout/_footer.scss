@@ -6,3 +6,21 @@
 		@include outer-container($max-width--desktop);
 	}
 }
+
+.insideFooter {
+	background-color: $primary-color;
+	padding: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__navContainer {
+		width: 50%;
+	}
+	&__logoContainer{
+		@include size(25rem null);
+		img {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+.blogContainer {
+		padding: 10rem 0 0 0;
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 0 2rem;
+		@include mq(large) {
+			flex-direction: row;
+			padding: 0;
+		}
+	}
+	&__blogArticle {
+		width: 100%;
+		@include mq(large) {
+			width: 65%;
+		}
+	}
+	&__sidebar {
+		width: 100%;
+		@include mq(large) {
+			width: 35%;
+		}
+	}
+}
+

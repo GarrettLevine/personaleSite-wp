@@ -9,10 +9,7 @@
       <section class="heroArea">
         <h1 class="heroArea__heroText"><?php the_field('hero_text') ?></h1>
         <h3 class="heroArea__subHeading"><?php the_field('sub-heading'); ?></h3>
-        <div class="heroArea__logoContainer">
-          <?php $logoImage = array(get_field('logo')); ?>
-          <img src="<?php echo $logoImage[0]['url'] ?>" alt="<?php echo $logoImage[0]['alt'] ?>">
-        </div>
+    
       </section>
 
       </div>
@@ -88,7 +85,7 @@
         <div class="contactArea__wrapper">
           <h5 class="contactArea__heading">Contact me Here.</h5>
           <?php wp_nav_menu( array(
-            'container' => false,
+            'container' => alse,
             'menu_class' => 'contactArea__socialContainer',
             'theme_location' => 'social_nav'
           )); ?>

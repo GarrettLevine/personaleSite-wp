@@ -1,0 +1,21 @@
+.blogContainer__sidebar {
+		padding: 4rem 0;
+		@include mq(large) {
+			text-align: right;
+		}
+	.widget-title {
+		font-size: 2rem;
+		opacity: 0.7;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+	}
+
+	a {
+		color: $secondary-color;
+		font-size: 1.7rem;
+		line-height: 2;
+		&:hover {
+			color: darken($secondary-color, 15%);
+		}
+	}
+}

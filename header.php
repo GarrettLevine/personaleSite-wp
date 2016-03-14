@@ -15,7 +15,27 @@
 
 <header class="header">
   <div class="header__container">
+			<div class="heroArea__logoContainer">
+        <?php  if(is_home() ): ?>
+  			  <?php $logoImage = array(get_field('logo')); ?>
+  			  <img src="<?php echo $logoImage[0]['url'] ?>" alt="<?php echo $logoImage[0]['alt'] ?>">
+        <?php else: ?>
+          <?php $frontPage = new WP_Query( array(
+            'pagename' => 'home'
+          )); ?>
 
+         <?php if ( $frontPage->have_posts() ) : ?>
+            <?php while ( $frontPage->have_posts() ) : $frontPage->the_post(); ?>
+                
+              <?php $logoImage = array(get_field('logo')); ?>
+                <a href="<?php the_permalink(); ?>">
+                  <img src="<?php echo $logoImage[0]['url'] ?>" alt="<?php echo $logoImage[0]['alt'] ?>">
+                </a>
+            <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
+      <?php endif; ?>
+			</div>
   </div> <!-- /.container -->
 </header><!--/.header-->
 

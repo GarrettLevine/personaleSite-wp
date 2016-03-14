@@ -3,6 +3,7 @@
 	padding: 9rem 0;
 	@include mq(large) {
 		padding-bottom: 0;
+		padding-left: 1.5rem;
 	}
 	&__logoContainer {
 		@include size(13.5rem 6.1rem);
@@ -11,7 +12,7 @@
 			width: 100%;
 		}
 		@include mq(large) {
-			right: 17%;
+			right: 7%;
 		}
 	}
 	&__heroText{
@@ -26,6 +27,7 @@
 			@include span-columns(8);
 			@include shift(0);
 			font-size: 9.2rem;
+			margin-top: 10rem;
 		}
 	}
 	&__subHeading {
