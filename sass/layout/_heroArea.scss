@@ -1,30 +1,31 @@
 .heroArea {
 	@include row();
-	padding: 9rem 0;
+	padding: 9rem 0 0;
 	@include mq(large) {
 		padding-bottom: 0;
-		padding-left: 1.5rem;
+		padding-left: 2rem;
 	}
 	&__logoContainer {
-		@include size(13.5rem 6.1rem);
-		@include position(absolute, -1rem 0 null null);
+		@include size(26rem 13rem);
+		@include position(absolute, -2.6rem 0 null null);
 		img {
 			width: 100%;
 		}
 		@include mq(large) {
-			right: 7%;
+			right: 16.5%;
+			transform: translateX(50%);
 		}
 	}
 	&__heroText{
 		@extend %heroText--style;
-		font-size: 5rem;
+		font-size: 9rem;
 		margin-bottom: 0;
 		line-height: 1.25;
 		@include mq(medium) {
 			font-size: 7rem;
 		}
 		@include mq(large) {
-			@include span-columns(8);
+			@include span-columns(11);
 			@include shift(0);
 			font-size: 9.2rem;
 			margin-top: 10rem;
@@ -33,9 +34,9 @@
 	&__subHeading {
 			@extend %heroText--style;
 			margin-top: 1rem;
-			font-size: 2.2rem;
+			font-size: 3rem;
 			@include mq(medium) {
-				font-size: 3.5rem;
+				font-size: 4rem;
 			}
 			@include mq(large) {
 				margin-left: 0;

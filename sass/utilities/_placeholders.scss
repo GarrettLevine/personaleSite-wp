@@ -1,11 +1,11 @@
 %heroText--style {
-	@include shift(1);
-	@include span-columns(10);
 	font-weight: 300;
-	color: transparent;
+	color: $primary-color;
+	-webkit-text-fill-color: transparent;
 	@include linear-gradient(to bottom right,
 		                        #ED645B 30%,
 		                        #53A0FD 70%,
 		                        #ECDF51 100%);
+	background: -moz-linear-gradient(transparent, transparent);
 	-webkit-background-clip: text;
 }

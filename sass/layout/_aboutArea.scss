@@ -1,9 +1,7 @@
 .aboutArea {
+	padding-bottom: 2rem;
 	margin: 5rem 0 0;
-	text-align:center;
-	@include mq(medium) {
-		text-align: left;
-	}
+	text-align:left;
 	&__text {
 		font-size: 1.8rem;
 		line-height: 2;

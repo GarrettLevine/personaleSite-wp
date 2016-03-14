@@ -1,7 +1,7 @@
 .desktopContainer {
 	@include mq(large) {
 		display: flex;
-		height: 209.5rem;
+		height: 205.5rem;
 		flex-flow: column wrap;
 		max-width: 110rem;
 		margin: auto;
@@ -10,7 +10,7 @@
 
 .mainArea {
 		@include mq(large) {
-			width:60%;
+			width:50%;
 			margin: 0;
 		}
 }
@@ -25,14 +25,14 @@
 
 .blogArea {
 	@include mq(large) {
-		width: 55%;
+		width: 52%;
 		order: 1;
 	}
 }
 
 .portfolioArea {
 	@include mq(large) {
-		width: 45%;
+		width:42.5%;
 		order: 4;
 	}
 }

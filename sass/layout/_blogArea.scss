@@ -1,17 +1,16 @@
 .blogArea {
-	@include mq(large) {
-		
-	}
+	position: relative;
+	margin-bottom: 6rem;
 	&__heading {
 		@extend .portfolioArea__heading;
-		left: -0.65rem;
-		top: 8.5rem;
+		left: 0;
+		margin: 0;
 		@include mq(medium) {
-			left: 4.4rem;
+			left: 0;
 		}
 		@include mq(large) {
-			left: -4rem;
-			top: 10.2rem;
+			left: -1rem;
+			top: 10rem;
 		}
 	}
 	&__blogContainer {

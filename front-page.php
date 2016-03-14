@@ -29,7 +29,7 @@
                      PORTFOLIO AREA
          ************************************************-->
       <section class="portfolioArea">
-        <h5 class="portfolioArea__heading">Recent Works</h5>
+        <h5 class="portfolioArea__heading">Recent Work</h5>
         <div class="portfolioArea__portfolioContainer">
         <?php $portfolioPieces = new WP_Query( array(
                "posts_per_page" => 5,
@@ -81,14 +81,5 @@
      <!-- **********************************************
                    CONTACT AREA
        ************************************************-->
-      <section class="contactArea clearfix">
-        <div class="contactArea__wrapper">
-          <h5 class="contactArea__heading">Contact me Here.</h5>
-          <?php wp_nav_menu( array(
-            'container' => alse,
-            'menu_class' => 'contactArea__socialContainer',
-            'theme_location' => 'social_nav'
-          )); ?>
-        </div>
-      </section> <!-- /.contactArea-->
+      
 <?php get_footer(); ?>

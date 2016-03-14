@@ -81,6 +81,22 @@ function hackeryou_scripts() {
     null, // version number
     true //load in footer
   );
+
+  wp_enqueue_script(
+    'waypoints', //handle
+    get_template_directory_uri() . '/js/waypoints/lib/jquery.waypoints.min.js', //source
+    array('jquery', 'plugins'), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
+    'sticky', //handle
+    get_template_directory_uri() . '/js/waypoints/lib/shortcuts/sticky.min.js', //source
+    array('jquery', 'plugins'), //dependencies
+    null, // version number
+    true //load in footer
+  );
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');

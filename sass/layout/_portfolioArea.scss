@@ -1,23 +1,28 @@
 .portfolioArea {
 		@include row();
+		position: relative;
 
 	&__heading {
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 		transform: rotate(-90deg);
 		display: inline-block;
-		position: relative;
-		left: -3.2rem;
-		top: 8.8rem;
+		position: absolute;
+		left: -2.6rem;
+		top: 6rem;
+		margin: 0;
 		font-weight:300;
 		text-transform: uppercase;
 		letter-spacing: 0.2rem;
 		@include mq(medium) {
 			font-size: 1.6rem;
-			top: 11.3rem;
-			left: 2rem;
+			top: 7rem;
+			left: -2.1rem;
+			font-size: 2.1rem;
 		}
 		@include mq(large) {
 			left: -5.7rem;
+			top: 6rem;
+			font-size: 1.5rem;
 		}
 	}
 	&__portfolioContainer {

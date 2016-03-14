@@ -3,16 +3,16 @@
 		margin: auto;
 		@include size(15rem);
 		@include mq(medium) {
-			@include span-columns(2);
+			@include span-columns(3);
 		}
 			img {
 				width: 100%;
 			}
 	}
 	&__textContainer {
-		text-align: center;
+		text-align: left;
 		@include mq(medium) {
-			@include span-columns(6);
+			@include span-columns(9);
 			text-align: left;
 		}
 	}
@@ -20,9 +20,10 @@
 
 .textContainer {
 	&__heading {
-		font-size: 1.8rem;
+		font-size: 2.2rem;
 		margin: 2rem 0 3rem;
 		opacity: 0.87;
+		text-align: center;
 		@include mq(medium) {
 			font-size: 3rem;
 		}
@@ -36,7 +37,8 @@
 			font-size: 1.8rem;
 		}
 		span {
-			font-weight: 600;
+			font-weight: 500;
+			opacity: 1;
 		}
 	}
 }

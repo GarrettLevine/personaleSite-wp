@@ -2,7 +2,7 @@
 	margin: 7rem 0 5rem;
 
 	&__heading {
-		font-size: 1.6rem;
+		font-size: 3rem;
 		color: $secondary-color;
 		font-weight: 300;
 	}
@@ -13,6 +13,7 @@
 		flex-wrap: wrap;
 		width: 25rem;
 		padding: 0;
+		line-height: 1.7;
 		@include mq(large) {
 			width: 48.5rem;
 		}
