@@ -1,0 +1,31 @@
+.copyImage {
+	background-color: $secondary-color;
+	@include size(8rem 3rem);
+	display: none;
+
+	p{
+		color: $white;
+		font-size: 1.3rem;
+		letter-spacing: 0.1rem;
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 0.5rem;
+	}
+	&::after {
+		@include size(1rem);
+		background-color: $secondary-color;
+		position: relative;
+	}	
+}
+.footer,
+.insideFooter {
+	.copyImage {
+		@include position(absolute, -4rem -2.5rem null null);
+	}
+}
+
+.contactArea {
+	.copyImage {
+		@include position(absolute, -4rem -2.5rem null null);
+	}
+}

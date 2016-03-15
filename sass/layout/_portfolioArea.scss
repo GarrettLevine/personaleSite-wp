@@ -26,6 +26,7 @@
 			font-size: 1.5rem;
 		}
 	}
+
 	&__portfolioContainer {
 		@include shift(2);
 		@include span-columns(10);
@@ -41,9 +42,11 @@
 			display: block;
 		}
 	}
+	
 	&__skillContainer{
 		padding: 0.5rem;
 	}
+
 	&__skillText {
 		font-size: 1.1rem;
 		font-weight: 300;

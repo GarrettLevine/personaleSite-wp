@@ -21,5 +21,8 @@
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.4.2"
+  },
+  "dependencies": {
+    "clipboard": "^1.5.9"
   }
 }

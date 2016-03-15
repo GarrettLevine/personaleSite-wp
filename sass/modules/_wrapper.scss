@@ -1,4 +1,5 @@
-div[class$="wrapper"] {
+div[class$="wrapper"],
+div[class$="Wrapper"] {
 	padding: 0 1.5rem;
 	@include outer-container($max-width--tablet);
 	@include mq(large) {

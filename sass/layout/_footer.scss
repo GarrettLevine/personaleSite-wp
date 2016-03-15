@@ -1,10 +1,39 @@
 .footer {
-	padding: 5rem 1rem 2rem;
 	background-color: $primary-color;
 	position: relative;
 
 	&__infoContainer {
 		@include outer-container($max-width--desktop);
+	}
+	&__contactArea {
+		position: relative;
+		background-color: #94C1C7;
+	}
+	&__contactContainer {
+		@include mq(large) {
+			position: relative;
+			width: 33.33%;
+			margin-left: 33.33%;
+		}
+	}
+	&__socialContainer {
+		display: flex;
+		justify-content: space-around;
+		padding: 1.5rem 0;
+		@include mq(large) {
+			justify-content: space-between;
+
+		}
+	}
+	i {
+		font-size: 3rem;
+		color: $white;
+		@include mq(large) {
+			font-size: 2.5rem;
+		}
+		&:hover {
+			color: $secondary-color;
+		}
 	}
 }
 
@@ -14,6 +43,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		max-width: $max-width--desktop;
+	}
 
 	&__navContainer {
 		width: 50%;
@@ -25,3 +59,4 @@
 		}
 	}
 }
+

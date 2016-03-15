@@ -16,37 +16,33 @@
 	  	</div>
 	  </div>
   </div>
-  
-
+  <div class="footer__contactArea">
+  	<div class="footer__contactWrapper">
+  		<div class="footer__contactContainer">
+  		<?php wp_nav_menu( array(
+  		 'container' => false,
+			  'menu_class' => 'footer__socialContainer',
+			  'theme_location' => 'social_footer_nav',
+			  'after' => '<div class="copyImage"><p>Copied!</p></div>'
+  		)); ?>
+  		</div>		
+  	</div>
+  </div>
 </footer>
 <?php else: ?>
 
-	<footer class="insideFooter">
-		<div class="insideFooter__wrapper">
-	  <div class="insideFooter__navContainer">
-		  <?php wp_nav_menu( array(
-		     'container' => false,
-		     'menu_class' => 'contactArea__socialContainer',
-		     'theme_location' => 'social_nav'
-		   )); ?>
-	  </div>
-   <div class="insideFooter__logoContainer">
-   	<?php $frontPage = new WP_Query( array(
-   			'pagename' => 'home'
-   	)); ?>
-
-    <?php if ( $frontPage->have_posts() ) : ?>
-	    <?php while ( $frontPage->have_posts() ) : $frontPage->the_post(); ?>
-	        
-		   	<?php $logoImage = array(get_field('logo')); ?>
-				  <img src="<?php echo $logoImage[0]['url'] ?>" alt="<?php echo $logoImage[0]['alt'] ?>">
-	    <?php endwhile; ?>
-		    <?php wp_reset_postdata(); ?>
-   <?php else:  ?>
-   <?php endif; ?>
-   </div>
-	  </div>
-	</div>
+	<footer class="footer">
+		<div class="footer__contactArea">
+  	<div class="footer__contactWrapper">
+  		<div class="footer__contactContainer">
+  		<?php wp_nav_menu( array(
+  		 'container' => false,
+			  'menu_class' => 'footer__socialContainer',
+			  'theme_location' => 'social_footer_nav',
+			  'after' => '<div class="copyImage"><p>Copied!</p></div>'
+  		)); ?>
+  		</div>		
+  	</div>
 	</footer>
 <?php endif; ?>
 

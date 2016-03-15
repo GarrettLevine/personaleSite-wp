@@ -12,6 +12,7 @@
 		@include mq(large) {
 			width:50%;
 			margin: 0;
+			align-self: flex-start;
 		}
 }
 
@@ -20,6 +21,7 @@
 		width: 40%;
 		order: 3;
 		padding-top: 3rem;
+		align-self: flex-end;
 	}
 }
 
@@ -34,6 +36,7 @@
 	@include mq(large) {
 		width:42.5%;
 		order: 4;
+		align-self: flex-end;
 	}
 }
 

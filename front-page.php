@@ -81,10 +81,11 @@
   <section class="contactArea clearfix">
     <div class="contactArea__wrapper">
       <h5 class="contactArea__heading">Contact me Here.</h5>
+      
       <?php wp_nav_menu( array(
-        'container' => alse,
         'menu_class' => 'contactArea__socialContainer',
-        'theme_location' => 'social_nav'
+        'theme_location' => 'social_nav',
+        'after' => '<div class="copyImage"><p>Copied!</p></div>'
       )); ?>
     </div>
   </section> <!-- /.contactArea-->

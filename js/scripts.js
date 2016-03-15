@@ -33,4 +33,17 @@ function portfolioScroll() {
 			  $('.portfolioArea__heading').removeClass('stuck');
 		}
 	});
+
 }
+
+$('.emailCopy').on('click', function(e) {
+	e.preventDefault();
+	var clipboard =	new Clipboard('.emailCopy');
+	$(this).siblings('.copyImage').fadeIn("slow").fadeOut("slow");
+	$(this).parent().siblings('.copyImage').fadeIn("slow").fadeOut("slow");
+});
+
+
+
+
+

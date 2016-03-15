@@ -15,8 +15,8 @@
 	}
 	&__textContainer {
 		text-align: left;
-		padding-top: 5rem;
-		@include mq(medium) {
+		padding: 10rem 0 5rem;
+		@include mq(large) {
 			@include span-columns(6);
 		}
 	}
