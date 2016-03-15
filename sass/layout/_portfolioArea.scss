@@ -4,10 +4,11 @@
 
 	&__heading {
 		font-size: 1.5rem;
+		font-family: $font-family--skillText;
 		transform: rotate(-90deg);
 		display: inline-block;
 		position: absolute;
-		left: -2.6rem;
+		left: -3.2rem;
 		top: 6rem;
 		margin: 0;
 		font-weight:300;
@@ -20,7 +21,7 @@
 			font-size: 2.1rem;
 		}
 		@include mq(large) {
-			left: -5.7rem;
+			left: -2.7rem;
 			top: 6rem;
 			font-size: 1.5rem;
 		}
@@ -29,8 +30,8 @@
 		@include shift(2);
 		@include span-columns(10);
 		@include mq(large) {
-			@include shift(1);
-			@include span-columns(11);
+			@include shift(2);
+			@include span-columns(10);
 		}
 	}
 
@@ -46,6 +47,7 @@
 	&__skillText {
 		font-size: 1.1rem;
 		font-weight: 300;
+		font-family: $font-family--skillText;
 		text-align: center;
 		color: $white;
 		letter-spacing: 0.1rem;

@@ -3,13 +3,13 @@
 	margin-bottom: 6rem;
 	&__heading {
 		@extend .portfolioArea__heading;
-		left: 0;
+		left: -1.5rem;
 		margin: 0;
 		@include mq(medium) {
 			left: 0;
 		}
 		@include mq(large) {
-			left: -1rem;
+			left: 1rem;
 			top: 10rem;
 		}
 	}

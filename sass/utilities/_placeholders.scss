@@ -1,5 +1,6 @@
 %heroText--style {
-	font-weight: 300;
+	font-family: $font-family--skillText;
+	font-weight: 100;
 	color: $primary-color;
 	-webkit-text-fill-color: transparent;
 	@include linear-gradient(to bottom right,

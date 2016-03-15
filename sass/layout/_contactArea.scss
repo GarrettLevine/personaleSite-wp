@@ -1,10 +1,12 @@
 .contactArea {
-	margin: 7rem 0 5rem;
+	margin: 7rem 0 9rem;
 
 	&__heading {
 		font-size: 3rem;
 		color: $secondary-color;
 		font-weight: 300;
+		margin-bottom: 0.3rem;
+		font-family: $font-family--skillText;
 	}
 
 	&__socialContainer {

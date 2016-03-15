@@ -1,6 +1,7 @@
 <?php if(is_home() or is_front_page() ): ?>
 
 <footer class="footer">
+	<div class="footer__wrapper">
   <div class="footer__navContainer">
   </div>
   <div class="footer__infoContainer">
@@ -13,22 +14,15 @@
 	  			<h4 class="textContainer__heading"><?php the_field('footer_heading'); ?></h4>
 	  			<p class="textContainer__text"><?php the_field('footer_text'); ?></p>
 	  	</div>
+	  </div>
   </div>
-  <section class="contactArea clearfix">
-    <div class="contactArea__wrapper">
-      <h5 class="contactArea__heading">Contact me Here.</h5>
-      <?php wp_nav_menu( array(
-        'container' => alse,
-        'menu_class' => 'contactArea__socialContainer',
-        'theme_location' => 'social_nav'
-      )); ?>
-    </div>
-  </section> <!-- /.contactArea-->
+  
 
 </footer>
 <?php else: ?>
 
 	<footer class="insideFooter">
+		<div class="insideFooter__wrapper">
 	  <div class="insideFooter__navContainer">
 		  <?php wp_nav_menu( array(
 		     'container' => false,
@@ -52,7 +46,7 @@
    <?php endif; ?>
    </div>
 	  </div>
-
+	</div>
 	</footer>
 <?php endif; ?>
 

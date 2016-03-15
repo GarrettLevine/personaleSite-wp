@@ -1,9 +1,9 @@
 .desktopContainer {
 	@include mq(large) {
 		display: flex;
-		height: 205.5rem;
+		height: 195.5rem;
 		flex-flow: column wrap;
-		max-width: 110rem;
+		max-width: $max-width--desktop;
 		margin: auto;
 	}
 }
